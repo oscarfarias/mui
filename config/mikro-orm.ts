@@ -1,12 +1,5 @@
 import type { Options } from '@mikro-orm/core'
-import {
-  Role,
-  User,
-  Prediction,
-  Lottery,
-  Animal,
-  ExternalPrediction,
-} from '../entities'
+import { Role, User } from '../entities'
 import {
   DB_NAME,
   DB_HOST,
@@ -16,7 +9,7 @@ import {
   IS_LOCAL,
 } from './constants'
 import CustomNamingStrategy from './namingStrategy'
-const entities = [Role, User, Prediction, Lottery, Animal, ExternalPrediction]
+const entities = [Role, User]
 const config: Options = {
   dbName: DB_NAME,
   type: `postgresql`,
