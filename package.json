@@ -127,8 +127,8 @@
     "pinst": "^3.0.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "yarn lint:write"      
+    "**/*.{js,ts,tsx}": [
+      "yarn lint:write"
     ]
   }
 }
