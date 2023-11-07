@@ -54,10 +54,10 @@ const Sidebar = (): JSX.Element => {
       }}
       p={1}
     >
-      <Grid item direction="row" p={1} sx={{ display: `flex` }}>
+      <Grid item direction="row" p={1} mt={1} sx={{ display: `flex` }}>
         <Image src={LOGO} alt="logo" />
       </Grid>
-      <Divider sx={{ backgroundColor: `white` }} />
+      <Divider sx={{ backgroundColor: `white`, marginTop: 1 }} />
 
       <List sx={{ width: `100%` }}>
         {menu.map(({ name, icon, selected }) => (

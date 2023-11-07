@@ -14,7 +14,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Grid
         container
         sm
-        height={{ xs: `calc(100vh - 56px)`, sm: `100vh` }}
+        height={{ xs: `calc(100vh - 56px)`, sm: `97vh` }}
         sx={{
           overflowY: `auto`,
         }}
