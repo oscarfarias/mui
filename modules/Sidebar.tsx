@@ -54,24 +54,26 @@ const Sidebar = (): JSX.Element => {
       }}
       p={1}
     >
-      <Grid item direction="row" p={1} mt={1} sx={{ display: `flex` }}>
-        <Image src={LOGO} alt="logo" />
-      </Grid>
-      <Divider sx={{ backgroundColor: `white`, marginTop: 1 }} />
+      <Grid ml={1} mr={1}>
+        <Grid item direction="row" p={1} mt={1} sx={{ display: `flex` }}>
+          <Image src={LOGO} alt="logo" />
+        </Grid>
+        <Divider sx={{ backgroundColor: `white`, marginTop: 1 }} />
 
-      <List sx={{ width: `100%` }}>
-        {menu.map(({ name, icon, selected }) => (
-          <ListItem key={name} disablePadding>
-            <ListItemButton sx={{ marginBottom: `4px` }} selected={selected}>
-              <ListItemIcon>
-                <Icon icon={icon} />
-              </ListItemIcon>
-              <ListItemText primary={name} />
-            </ListItemButton>
-          </ListItem>
-        ))}
-      </List>
-      <Divider sx={{ backgroundColor: `white` }} />
+        <List sx={{ width: `100%` }}>
+          {menu.map(({ name, icon, selected }) => (
+            <ListItem key={name} disablePadding>
+              <ListItemButton sx={{ marginBottom: `4px` }} selected={selected}>
+                <ListItemIcon>
+                  <Icon icon={icon} />
+                </ListItemIcon>
+                <ListItemText primary={name} />
+              </ListItemButton>
+            </ListItem>
+          ))}
+        </List>
+        <Divider sx={{ backgroundColor: `white` }} />
+      </Grid>
     </Grid>
   )
 }
