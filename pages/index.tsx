@@ -1,3 +1,3 @@
-import { Login } from 'modules'
+import { Dashboard } from 'modules'
 
-export default Login
+export default Dashboard

@@ -1,15 +1,15 @@
 import { ReactElement } from 'react'
 import Layout from './Layout'
 
-const Home = (): JSX.Element => {
+const Dashboard = (): JSX.Element => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Dashboard</h1>
     </div>
   )
 }
-Home.getLayout = function getLayout(page: ReactElement) {
+Dashboard.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 
-export default Home
+export default Dashboard

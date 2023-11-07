@@ -1,2 +1,3 @@
 import Login from './Login'
-export { Login }
+import Dashboard from './Dashboard'
+export { Login, Dashboard }

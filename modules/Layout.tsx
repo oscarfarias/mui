@@ -1,24 +1,36 @@
-import Box from '@mui/material/Box'
 import Toolbar from '@mui/material/Toolbar'
 import Header from './Header'
 import Sidebar from './Sidebar'
+import { Grid } from '@mui/material'
 interface LayoutProps {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
   return (
-    <Box sx={{ display: `flex` }}>
+    <Grid container p={1} sx={{ backgroundColor: `#F0F2F5` }}>
       <Header />
       <Sidebar />
-      <Box
-        component="main"
-        sx={{ flexGrow: 1, bgcolor: `background.default`, p: 3 }}
+      <Grid
+        container
+        sm
+        height={{ xs: `calc(100vh - 56px)`, sm: `100vh` }}
+        sx={{
+          overflowY: `auto`,
+        }}
       >
-        <Toolbar />
-        {children}
-      </Box>
-    </Box>
+        <Grid
+          mx={{ sm: 3, xs: 1 }}
+          mt={{ sm: 3, xs: 1 }}
+          mb={{ sm: 2 }}
+          xs={12}
+          sm={12}
+        >
+          <Toolbar />
+          {children}
+        </Grid>
+      </Grid>
+    </Grid>
   )
 }
 
