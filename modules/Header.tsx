@@ -8,7 +8,7 @@ const Header = (): JSX.Element => {
     >
       <Toolbar>
         <Typography variant="h6" noWrap component="div">
-          Workshop - Zustand
+          Default Template
         </Typography>
       </Toolbar>
     </AppBar>

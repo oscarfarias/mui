@@ -1,3 +1,5 @@
+import gradients from '../gradients'
+
 const button = {
   MuiButton: {
     defaultProps: {
@@ -8,9 +10,13 @@ const button = {
         padding: 6,
         paddingLeft: 12,
         paddingRight: 12,
-        borderRadius: 4,
+        borderRadius: `8px`,
+        width: `100%`,
+        background: gradients[0],
         '&:hover': {
-          borderRadius: 4,
+          borderRadius: `8px`,
+          width: `100%`,
+          background: gradients[0],
         },
         '&:disabled': {
           cursor: `not-allowed`,
@@ -21,7 +27,9 @@ const button = {
         padding: 6,
         paddingLeft: 12,
         paddingRight: 12,
-        borderRadius: 4,
+        borderRadius: `8px`,
+        width: `100%`,
+        background: gradients[0],
       },
     },
   },
