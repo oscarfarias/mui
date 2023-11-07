@@ -8,16 +8,9 @@ import { drawerWidth } from 'common/config/constants'
 import { Grid } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { Icon } from 'common/components'
-import { icons } from 'common/components/Icon'
+import { MenuProps } from './types'
 import { LOGO } from 'common/assets'
 import Image from 'next/image'
-
-interface MenuProps {
-  name: string
-  icon: keyof typeof icons
-  selected?: boolean
-}
-
 const menu: MenuProps[] = [
   {
     name: `Dashboard`,
