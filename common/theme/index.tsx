@@ -13,6 +13,7 @@ import typography from './typography'
 import breakpoints from './breakpoints'
 import componentsOverride from './overrides'
 import shadows, { customShadows } from './shadows'
+import gradients from './gradients'
 ThemeConfig.propTypes = {
   children: PropTypes.node,
 }
@@ -29,6 +30,7 @@ export default function ThemeConfig({
     breakpoints,
     shadows: shadows.light,
     customShadows: customShadows.light,
+    gradients,
   }
 
   const theme = createTheme(themeOptions)

@@ -1,6 +1,7 @@
 /* eslint-disable quotes */
 import { Roboto } from '@next/font/google'
-import { PaletteMode } from '@mui/material'
+import { PaletteMode, Theme } from '@mui/material'
+
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
   subsets: ['latin'],
@@ -8,9 +9,27 @@ export const roboto = Roboto({
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
 })
 
-declare module '@mui/material/styles' {
-  //interface Palette {}
+declare module '@mui/styles/defaultTheme' {
+  type DefaultTheme = Theme
 }
+
+declare module '@mui/material/styles' {
+  interface BreakpointOverrides {
+    xs: true
+    sm: true
+    md: true
+    lg: true
+    xl: true
+    mobile: true
+    tablet: true
+    laptop: true
+    desktop: true
+  }
+  interface Theme {
+    gradients: string[]
+  }
+}
+
 const primary = {
   main: `#E93B77`,
   dark: `#115293`,

@@ -1,3 +1,3 @@
-import { Home } from 'modules'
+import { Login } from 'modules'
 
-export default Home
+export default Login
