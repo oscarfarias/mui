@@ -1,26 +1,33 @@
-import { AppBar, Grid, Toolbar, Typography } from '@mui/material'
+import { AppBar, Grid, TextField, Toolbar, Typography } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 import { Icon } from 'common/components'
 import { drawerWidth } from 'common/config/constants'
 const Header = (): JSX.Element => {
+  const {
+    palette: {
+      custom: { lightDark, lightWhite, primaryDark },
+    },
+  } = useTheme()
+
   return (
     <AppBar
       position="fixed"
       sx={{
         width: `calc(100% - ${drawerWidth + 8}px)`,
-        backgroundColor: `#F0F2F5`,
+        backgroundColor: lightWhite,
         mt: `8px`,
       }}
       elevation={0}
     >
       <Toolbar>
-        <Grid container>
+        <Grid container direction="row" justifyContent="space-between">
           <Grid item direction="column" md={5}>
             <Grid item direction="row" sx={{ display: `flex` }}>
-              <Icon icon="home" sx={{ color: `#7B809A` }} />
+              <Icon icon="home" sx={{ color: lightDark }} />
               <Typography
                 fontSize="14px"
                 sx={{
-                  color: `#7B809A`,
+                  color: lightDark,
                 }}
               >
                 / Pages /
@@ -28,7 +35,7 @@ const Header = (): JSX.Element => {
               <Typography
                 fontSize="14px"
                 sx={{
-                  color: `#344767`,
+                  color: primaryDark,
                   marginLeft: `3px`,
                 }}
               >
@@ -40,12 +47,23 @@ const Header = (): JSX.Element => {
                 fontWeight="500"
                 fontSize="16px"
                 sx={{
-                  color: `#344767`,
+                  color: primaryDark,
                 }}
               >
                 Dashboard
               </Typography>
             </Grid>
+          </Grid>
+          <Grid item>
+            <TextField
+              sx={{
+                width: `173px`,
+                '& .MuiOutlinedInput-root': {
+                  backgroundColor: lightWhite,
+                },
+              }}
+              placeholder="Search here"
+            />
           </Grid>
         </Grid>
       </Toolbar>

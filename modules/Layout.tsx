@@ -2,13 +2,20 @@ import Toolbar from '@mui/material/Toolbar'
 import Header from './Header'
 import Sidebar from './Sidebar'
 import { Grid } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 interface LayoutProps {
   children: React.ReactNode
 }
 
 const Layout = ({ children }: LayoutProps): JSX.Element => {
+  const {
+    palette: {
+      custom: { lightWhite },
+    },
+  } = useTheme()
+
   return (
-    <Grid container p={1} sx={{ backgroundColor: `#F0F2F5` }}>
+    <Grid container p={1} sx={{ backgroundColor: lightWhite }}>
       <Header />
       <Sidebar />
       <Grid
