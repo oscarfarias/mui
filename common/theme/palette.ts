@@ -5,6 +5,7 @@ interface CustomColors {
   lightWhite: string
   lightDark: string
   primaryDark: string
+  snow: string
 }
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -58,6 +59,7 @@ const custom = {
   lightWhite: `#F0F2F5`,
   lightDark: `#7B809A`,
   primaryDark: `#344767`,
+  snow: '#E9EAED',
 }
 
 const COMMON = {
