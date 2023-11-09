@@ -54,7 +54,7 @@ const Header = (): JSX.Element => {
               </Typography>
             </Grid>
           </Grid>
-          <Grid item>
+          <Grid item direction="row" sx={{ display: `flex` }} xs={3}>
             <TextField
               sx={{
                 width: `173px`,
@@ -64,6 +64,20 @@ const Header = (): JSX.Element => {
               }}
               placeholder="Search here"
             />
+            <Grid
+              item
+              sx={{
+                justifyContent: `space-between`,
+                display: `flex`,
+                marginTop: `8px`,
+                marginLeft: `15px`,
+              }}
+              md={5}
+            >
+              <Icon icon="accountCircle" sx={{ color: lightDark }} />
+              <Icon icon="settings" sx={{ color: lightDark }} />
+              <Icon icon="notifications" sx={{ color: lightDark }} />
+            </Grid>
           </Grid>
         </Grid>
       </Toolbar>
