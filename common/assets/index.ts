@@ -5,6 +5,7 @@ import GOOGLE_ICON from 'public/assets/icons/google.svg'
 import LOGO from 'public/assets/icons/logo.png'
 import RECORDING from 'public/assets/images/recording.png'
 import RECORDING_ICON from 'public/assets/icons/recording.svg'
+import SUNNY from 'public/assets/images/sunny.png'
 export {
   LOGIN_BACKGROUND,
   FACEBOOK_ICON,
@@ -13,4 +14,5 @@ export {
   LOGO,
   RECORDING,
   RECORDING_ICON,
+  SUNNY,
 }
