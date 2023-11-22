@@ -5,6 +5,20 @@ const button = {
     defaultProps: {
       variant: `contained`,
     },
+    variants: [
+      {
+        props: { variant: `flat` },
+        style: {
+          background: `transparent`,
+          color: `black`,
+
+          '&:hover': {
+            background: `transparent`,
+            color: `black`,
+          },
+        },
+      },
+    ],
     styleOverrides: {
       root: {
         padding: 6,

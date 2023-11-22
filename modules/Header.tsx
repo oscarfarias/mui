@@ -21,8 +21,8 @@ const Header = (): JSX.Element => {
     >
       <Toolbar>
         <Grid container direction="row" justifyContent="space-between">
-          <Grid item direction="column" md={5}>
-            <Grid item direction="row" sx={{ display: `flex` }}>
+          <Grid item sx={{ flexDirection: `column` }} md={5}>
+            <Grid container direction="row" sx={{ display: `flex` }}>
               <Icon icon="home" sx={{ color: lightDark }} />
               <Typography
                 fontSize="14px"

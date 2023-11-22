@@ -19,7 +19,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
       <Header />
       <Sidebar />
       <Grid
-        container
+        item
         sm
         height={{ xs: `calc(100vh - 56px)`, sm: `97vh` }}
         sx={{
@@ -32,6 +32,7 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
           mb={{ sm: 2 }}
           xs={12}
           sm={12}
+          item
         >
           <Toolbar />
           {children}

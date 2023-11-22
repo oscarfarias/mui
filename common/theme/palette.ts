@@ -6,6 +6,7 @@ interface CustomColors {
   lightDark: string
   primaryDark: string
   snow: string
+  linearCloud: string
 }
 export const roboto = Roboto({
   weight: ['300', '400', '500', '700'],
@@ -16,6 +17,12 @@ export const roboto = Roboto({
 
 declare module '@mui/styles/defaultTheme' {
   type DefaultTheme = Theme
+}
+
+declare module '@mui/material/Button' {
+  interface ButtonPropsVariantOverrides {
+    flat: true
+  }
 }
 
 declare module '@mui/material/styles' {
@@ -60,6 +67,7 @@ const custom = {
   lightDark: `#7B809A`,
   primaryDark: `#344767`,
   snow: '#E9EAED',
+  linearCloud: '#F8F9FA',
 }
 
 const COMMON = {
