@@ -1,8 +1,8 @@
 import { ReactElement } from 'react'
 import Layout from './Layout'
-import { Grid, Paper, Typography } from '@mui/material'
+import { Box, Grid, Paper, Typography } from '@mui/material'
 import Image from 'next/image'
-import { RECORDING } from 'common/assets'
+import { RECORDING, RECORDING_ICON } from 'common/assets'
 import { useTheme } from '@mui/material/styles'
 
 const Dashboard = (): JSX.Element => {
@@ -32,7 +32,11 @@ const Dashboard = (): JSX.Element => {
         >
           <Grid
             item
-            sx={{ display: `flex`, top: `-5%`, position: `absolute` }}
+            sx={{
+              display: `flex`,
+              top: `-5%`,
+              position: `absolute`,
+            }}
             md={12}
             ml={1}
             mr={1}
@@ -42,17 +46,35 @@ const Dashboard = (): JSX.Element => {
           <Paper
             sx={{
               zIndex: 1,
-              width: `150px`,
+              width: `130px`,
               backgroundColor: snow,
-              padding: 1,
+              padding: `4px`,
+              justifyContent: `center`,
+
+              display: `flex`,
+              position: `absolute`,
+              right: `25px`,
+              borderRadius: `12px`,
             }}
           >
-            <Typography
-              fontWeight="500"
-              sx={{ color: `black`, borderRadius: `8px` }}
+            <Box
+              sx={{ marginTop: `2px`, flexDirection: `row`, display: `flex` }}
             >
-              RECORDING
-            </Typography>
+              <Box sx={{ marginTop: `2px` }}>
+                <Image
+                  src={RECORDING_ICON}
+                  alt="recording_icon"
+                  width={16}
+                  height={16}
+                />
+              </Box>
+              <Typography
+                fontWeight="500"
+                sx={{ color: `black`, marginLeft: `4px` }}
+              >
+                RECORDING
+              </Typography>
+            </Box>
           </Paper>
         </Grid>
       </Paper>

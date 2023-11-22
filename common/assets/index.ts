@@ -4,6 +4,7 @@ import GITHUB_ICON from 'public/assets/icons/github.svg'
 import GOOGLE_ICON from 'public/assets/icons/google.svg'
 import LOGO from 'public/assets/icons/logo.png'
 import RECORDING from 'public/assets/images/recording.png'
+import RECORDING_ICON from 'public/assets/icons/recording.svg'
 export {
   LOGIN_BACKGROUND,
   FACEBOOK_ICON,
@@ -11,4 +12,5 @@ export {
   GOOGLE_ICON,
   LOGO,
   RECORDING,
+  RECORDING_ICON,
 }
