@@ -5,10 +5,11 @@ const input = {
         '& .MuiOutlinedInput-notchedOutline': {
           border: `none`,
         },
-        border: `0.5px solid #909090`,
       },
       formControl: {
         width: `100%`,
+        height: `42px`,
+        border: `0.5px solid #C7CCD0`,
       },
       input: {
         '&:disabled': {
@@ -20,25 +21,15 @@ const input = {
       },
     },
   },
-  MuiInput: {
+  MuiTextField: {
     styleOverrides: {
       root: {
-        fontSize: `0.9em`,
+        '& .MuiOutlinedInput-root': {
+          borderRadius: `8px`,
+          width: `100%`,
+          backgroundColor: `white`,
+        },
         width: `100%`,
-        color: `black`,
-      },
-      underline: {
-        '&:before': {
-          // eslint-disable-next-line quotes
-          content: '""',
-        },
-        '&:after': {
-          // eslint-disable-next-line quotes
-          content: '""',
-        },
-      },
-      error: {
-        border: `1.2px solid red`,
       },
     },
   },
