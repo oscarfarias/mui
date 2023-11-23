@@ -2,8 +2,10 @@ import { Switch, TextField, Typography, Grid, Button } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import Image from 'next/image'
 import { FACEBOOK_ICON, GITHUB_ICON, GOOGLE_ICON } from 'common/assets'
+import { useRouter } from 'next/router'
 const Login = (): JSX.Element => {
   const theme = useTheme()
+  const router = useRouter()
 
   return (
     <Grid
@@ -94,7 +96,12 @@ const Login = (): JSX.Element => {
               </Typography>
             </Grid>
 
-            <Button sx={{ marginTop: `30px` }}>SIGN IN</Button>
+            <Button
+              onClick={() => router.push(`/dashboard`)}
+              sx={{ marginTop: `30px` }}
+            >
+              SIGN IN
+            </Button>
             <Grid
               item
               sx={{
