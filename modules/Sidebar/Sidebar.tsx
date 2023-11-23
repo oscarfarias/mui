@@ -5,7 +5,7 @@ import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import ListItemText from '@mui/material/ListItemText'
 import { drawerWidth } from 'common/config/constants'
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
 import { Icon } from 'common/components'
 import { MenuProps } from './types'
@@ -19,15 +19,12 @@ const menu: MenuProps[] = [
   },
   {
     name: `Analytics`,
-    icon: `apartment`,
   },
   {
     name: `Billing`,
-    icon: `apartment`,
   },
   {
     name: `Profile`,
-    icon: `apartment`,
   },
   {
     name: `Notifications`,
@@ -58,8 +55,26 @@ const Sidebar = (): JSX.Element => {
             <ListItem key={name} disablePadding>
               <ListItemButton sx={{ marginBottom: `4px` }} selected={selected}>
                 <ListItemIcon>
-                  <Icon icon={icon} />
+                  {icon ? (
+                    <Icon
+                      sx={{
+                        color: theme.palette.custom.lightWhite,
+                      }}
+                      icon={icon}
+                    />
+                  ) : (
+                    <Typography
+                      sx={{
+                        fontSize: `14px !important`,
+                        marginLeft: `8px`,
+                        color: theme.palette.custom.lightWhite,
+                      }}
+                    >
+                      {name[0]}
+                    </Typography>
+                  )}
                 </ListItemIcon>
+
                 <ListItemText primary={name} />
               </ListItemButton>
             </ListItem>
