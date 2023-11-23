@@ -6,6 +6,7 @@ import LOGO from 'public/assets/icons/logo.png'
 import RECORDING from 'public/assets/images/recording.png'
 import RECORDING_ICON from 'public/assets/icons/recording.svg'
 import SUNNY from 'public/assets/images/sunny.png'
+import CHART from 'public/assets/images/chart.png'
 export {
   LOGIN_BACKGROUND,
   FACEBOOK_ICON,
@@ -15,4 +16,5 @@ export {
   RECORDING,
   RECORDING_ICON,
   SUNNY,
+  CHART,
 }

@@ -3,3 +3,7 @@ export enum CAMERAS {
   LIVING = `LIVING`,
   ATTIC = `ATTIC`,
 }
+export interface Camera {
+  title: string
+  type: CAMERAS
+}

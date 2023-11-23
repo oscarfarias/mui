@@ -1,6 +1,21 @@
 import { useState } from 'react'
-import { CAMERAS } from './types'
+import { CAMERAS, Camera } from './types'
 import { SxProps, Theme, useTheme } from '@mui/material/styles'
+
+const cameras: Camera[] = [
+  {
+    title: `Living`,
+    type: CAMERAS.LIVING,
+  },
+  {
+    title: `Kitchen`,
+    type: CAMERAS.KITCHEN,
+  },
+  {
+    title: `Attic`,
+    type: CAMERAS.ATTIC,
+  },
+]
 
 const useCamera = () => {
   const {
@@ -26,6 +41,7 @@ const useCamera = () => {
   return {
     getSXByCameraState,
     setCameraState,
+    cameras,
   }
 }
 
