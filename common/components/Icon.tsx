@@ -152,6 +152,8 @@ import {
   RadioButtonUnchecked,
   PowerRounded,
   PriorityHighRounded,
+  AccountCircleRounded,
+  Notifications,
 } from '@mui/icons-material'
 export const icons = {
   add: AddRounded,
@@ -307,6 +309,8 @@ export const icons = {
   controlPointDuplicate: ControlPointDuplicate,
   powerRounded: PowerRounded,
   priorityHighRounded: PriorityHighRounded,
+  accountCircle: AccountCircleRounded,
+  notifications: Notifications,
 }
 
 export interface IconProps extends SvgIconProps {

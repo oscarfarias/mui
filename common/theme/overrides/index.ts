@@ -7,6 +7,7 @@ import formControlLabel from './formControlLabel'
 import typography from '../typography'
 import chip from './chip'
 import table from './table'
+import listItem from './listitem'
 export default function ComponentsOverrides(): Record<string, any> {
   return merge({
     ...table,
@@ -17,5 +18,6 @@ export default function ComponentsOverrides(): Record<string, any> {
     ...typography,
     ...chip,
     ...button,
+    ...listItem,
   })
 }
