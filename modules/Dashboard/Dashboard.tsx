@@ -3,6 +3,7 @@ import Layout from '../Layout'
 import { Grid } from '@mui/material'
 import Camera from './Camera'
 import Wheather from './Wheather'
+import Temperature from './Temperature'
 
 const Dashboard = (): JSX.Element => {
   return (
@@ -14,6 +15,9 @@ const Dashboard = (): JSX.Element => {
         <Grid item sx={{ width: `39%` }}>
           <Wheather />
         </Grid>
+      </Grid>
+      <Grid container mt="8px">
+        <Temperature />
       </Grid>
     </Grid>
   )
